@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CineVerse - Your Movie Library</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- Navbar -->
+  <header class="navbar">
+    <div class="logo">🎬 CineVerse</div>
+    <input type="checkbox" id="menu-toggle" />
+    <label for="menu-toggle" class="menu-icon">☰</label>
+    <nav class="nav-links">
+      <a href="#intro">Home</a>
+      <a href="#trending">Trending</a>
+      <a href="#popular">Popular</a>
+      <a href="#reviews">Reviews</a>
+    </nav>
+  </header>
+
+  <!-- Intro Section -->
+  <section id="intro" class="intro">
+    <div class="intro-left">
+      <h1>CineVerse</h1>
+      <p>Discover the World of Movies & Shows</p>
+      <a href="#trending" class="btn">Explore Trending</a>
+    </div>
+    <div class="intro-right">
+      <svg width="100" height="100" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+  <!-- Group representing the film reel that rotates -->
+        <g>
+          <!-- Outer film reel border -->
+          <circle cx="50" cy="50" r="40" stroke="#000" stroke-width="3" fill="none"/>
+          <!-- Film sprocket holes -->
+          <circle cx="50" cy="15" r="4" fill="#000"/>
+          <circle cx="50" cy="85" r="4" fill="#000"/>
+          <circle cx="85" cy="50" r="4" fill="#000"/>
+          <circle cx="15" cy="50" r="4" fill="#000"/>
+          <!-- Animate the rotation of the film reel -->
+          <animateTransform 
+              attributeName="transform"
+              attributeType="XML"
+              type="rotate"
+              from="0 50 50"
+              to="360 50 50"
+              dur="10s"
+              repeatCount="indefinite"/>
+        </g>
+  
+        <!-- Central pulsating hub -->
+        <circle cx="50" cy="50" r="10" fill="#ff3f3f">
+          <animate attributeName="r" values="8;10;8" dur="2s" repeatCount="indefinite"/>
+        </circle>
+  
+        <!-- Play icon (triangle) on the center -->
+        <polygon points="45,40 45,60 60,50" fill="#000">
+          <animate attributeName="fill" values="#000;#ff3f3f;#000" dur="2s" repeatCount="indefinite"/>
+        </polygon>
+      </svg>
+
+    </div>
+  </section>
+
+  <!-- Trending Movies -->
+  <section id="trending" class="section">
+    <h2>Trending Movies</h2>
+    <p class="subtitle">Check out the most popular picks this week!</p>
+    <div class="card-container">
+      <div class="card">
+        <img src="./Inception.png" alt="Inception">
+        <div class="card-content">
+          <h3>Inception</h3>
+          <p>A mind-bending thriller by Christopher Nolan.</p>
+          <span class="duration">2h 28m</span>
+        </div>
+        <div class="card-hover">
+          <a href="https://www.netflix.com" class="watch-btn">Watch Now</a>
+          <div class="watchlist-btn">+</div>
+        </div>
+      </div>
+      <div class="card">
+        <img src="./INST_SAlone.jpg" alt="Interstellar">
+        <div class="card-content">
+          <h3>Interstellar</h3>
+          <p>Exploration of time and space to save humanity.</p>
+          <span class="duration">2h 49m</span>
+        </div>
+        <div class="card-hover">
+          <a href="https://www.netflix.com" class="watch-btn">Watch Now</a>
+          <div class="watchlist-btn">+</div>
+        </div>
+      </div>
+      <div class="card">
+        <img src="./Jocker.png" alt="Joker">
+        <div class="card-content">
+          <h3>Joker</h3>
+          <p>A deep dive into the origins of Gotham’s villain.</p>
+          <span class="duration">2h 2m</span>
+        </div>
+        <div class="card-hover">
+          <a href="https://www.netflix.com" class="watch-btn">Watch Now</a>
+          <div class="watchlist-btn">+</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Popular Shows -->
+  <section id="popular" class="section">
+    <h2>Popular Shows</h2>
+    <p class="subtitle">Binge-worthy series you can’t miss!</p>
+    <div class="card-container">
+      <div class="card">
+        <img src="./Stranger_Things_logo.png" alt="Stranger Things">
+        <div class="card-content">
+          <h3>Stranger Things</h3>
+          <p>Sci-Fi | 4 Seasons, 34 Episodes</p>
+          <span class="duration">8.6/10 IMDb</span>
+        </div>
+        <label for="modal-1" class="learn-btn">Learn More</label>
+      </div>
+      <div class="card">
+        <img src="./Dark-Capa.webp" alt="Dark">
+        <div class="card-content">
+          <h3>Dark</h3>
+          <p>Thriller | 3 Seasons, 26 Episodes</p>
+          <span class="duration">8.7/10 IMDb</span>
+        </div>
+      </div>
+    </div>
+    <input type="checkbox" id="modal-1" class="modal-toggle">
+    <div class="modal">
+      <label for="modal-1" class="close-modal">X</label>
+      <h3>Stranger Things</h3>
+      <p>Set in the 80s, this thrilling show combines nostalgia, horror, and friendship. Join Eleven and the gang on their supernatural adventures.</p>
+      <a href="https://www.netflix.com" class="watch-btn">Watch Now</a>
+    </div>
+  </section>
+
+  <!-- User Reviews -->
+  <section id="reviews" class="section">
+    <h2>User Reviews</h2>
+    <p class="subtitle">What our viewers say</p>
+    <div class="review-section">
+      <div class="review-card">
+        <img src="./user-gradient-blur-button-glassmorphism-d-icon-design-profile-avatar-sign-businesspeople-silhouette-symbol-transparent-glass-264337745.webp" alt="User 1">
+        <h4>Aryan</h4>
+        <p>Great recommendations! Loved the interface too.</p>
+      </div>
+      <div class="review-card">
+        <img src="./user-gradient-blur-button-glassmorphism-d-icon-design-profile-avatar-sign-businesspeople-silhouette-symbol-transparent-glass-264337745.webp" alt="User 2">
+        <h4>Riya</h4>
+        <p>Clean design and smooth navigation. Keep it up!</p>
+      </div>
+      <form class="review-form">
+        <h4>Submit Your Review</h4>
+        <input type="text" placeholder="Name" required>
+        <input type="email" placeholder="Email" required>
+        <textarea placeholder="Your Review" required></textarea>
+        <button type="submit">Submit</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="social">
+      <a href="#" target="_blank">Instagram</a>
+      <a href="#" target="_blank">Twitter</a>
+    </div>
+    <div class="legal">
+      <a href="https://example.com/terms" target="_blank">Terms</a>
+      <a href="https://example.com/privacy" target="_blank">Privacy</a>
+    </div>
+    <a href="#" class="back-to-top">↑</a>
+  </footer>
+</body>
+</html>
